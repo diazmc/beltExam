@@ -1,0 +1,27 @@
+<a [routerLink]="['/create']">Create a New Poll</a>
+<a [routerLink]="['/']">Logout</a>
+
+
+<h2>Current Polls:</h2>
+
+  <input type='text' splaceholder='Search'><br><br>
+
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Survey Question</th>
+    <th>Date Posted</th>
+    <th>Action</th>
+  </tr>
+ 
+    <tr *ngFor='let question of questions'>
+      <td></td>
+      <td><a [routerLink]="['/poll', question._id ]">{{question.text}}</a></td>
+      <td>{{question.createdAt | date}}</td>
+      <td></td>
+    </tr>
+
+</table>
+

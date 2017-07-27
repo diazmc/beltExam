@@ -1,0 +1,40 @@
+
+<div *ngFor='let q of question'>
+  <h1>{{q.text}}</h1>
+
+  <a [routerLink]="['/dashboard']">Go to Polls</a>
+
+  <p>Click the Vote button to choose one</p>
+
+  <table>
+    <tr>
+      <th>Option</th>
+      <th>Current Count of Votes</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>{{q.option1}}</td>
+      <td>{{q.vote1}}</td>
+      <td><span *ngIf='question'><button>Vote</button></span></td>
+    </tr>
+    <tr>
+
+    </tr>
+      <td>{{q.option2}}</td>
+      <td>{{q.vote2}}</td>
+      <td><span *ngIf='question'><button>Vote</button></span></td>
+    <tr>
+      <td>{{q.option3}}</td>
+      <td>{{q.vote3}}</td>
+      <td><span *ngIf='question'><button>Vote</button></span></td>
+    </tr>
+
+    <tr>
+      <td>{{q.option4}}</td>
+      <td>{{q.vote4}}</td>
+      <td><span *ngIf='question'><button>Vote</button></span></td>
+    </tr>
+
+  </table>
+
+</div>

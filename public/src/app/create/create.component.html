@@ -1,0 +1,19 @@
+
+<a [routerLink]="['/dashboard']">Cancel</a>
+
+<h2>Put the Question and Options here:</h2>
+
+<form (submit)='createPoll()' #form='ngForm'>
+  Question:<input type='text' name='text' minlength="8" [(ngModel)]='question.text' #field='ngModel' required>
+  <span *ngIf='!field.valid && field.touched'><b>Question needs at least 8 characters</b></span><br><br>
+  Option 1:<input type='text' name='option1' minlength="3" [(ngModel)]='question.option1' #option1='ngModel' required>
+  <span *ngIf='!option1.valid && option1.touched'><b>Need at least 3 characters</b></span><br><br>
+  Option 2:<input type='text' name='option2' minlength="3" [(ngModel)]='question.option2' #option2='ngModel' required>
+  <span *ngIf='!option2.valid && option2.touched'><b>Need at least 3 characters</b></span><br><br>
+  Option 3:<input type='text' name='option3' minlength="3" [(ngModel)]='question.option3' #option3='ngModel' required>
+  <span *ngIf='!option3.valid && option3.touched'><b>Need at least 3 characters</b></span><br><br>
+  Option 4:<input type='text' name='option4' minlength="3" [(ngModel)]='question.option4' #option4='ngModel' required>
+  <span *ngIf='!option4.valid && option4.touched'><b>Need at least 3 characters</b></span><br><br>
+  <input type='submit' value='Create Poll' [disabled]='!form.valid'>
+</form>
+
