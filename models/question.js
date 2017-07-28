@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var QuestionSchema = mongoose.Schema({
+    name: String,
     text: String,
     option1: String,
     vote1: Number,

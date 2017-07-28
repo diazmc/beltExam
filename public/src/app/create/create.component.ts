@@ -24,8 +24,11 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
   }
 
+  name = this._http.getuser();
+
   createPoll(){
     this._http.createQuestion({
+      name: this.name,
       text:  this.question.text,
       option1: this.question.option1,
       vote1: 0,

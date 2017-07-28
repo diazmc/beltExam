@@ -17,7 +17,7 @@
   </tr>
  
     <tr *ngFor='let question of questions'>
-      <td></td>
+      <td>{{question.name}}</td>
       <td><a [routerLink]="['/poll', question._id ]">{{question.text}}</a></td>
       <td>{{question.createdAt | date}}</td>
       <td></td>
